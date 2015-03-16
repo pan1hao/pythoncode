@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-cn" >
+<head>
+	<meta charset="UTF-8">
+	<title>Mock.js demo</title>
+    <style>
+    body {
+        color: #545454;
+    }
+
+    h1, p {
+        text-align: center;
+    }
+
+    ul {
+        text-align: left;
+        list-style: none;
+        display: inline-block;
+        border-top:1px solid #eee;
+        border-radius: 5px;
+        box-shadow: 0 1px 2px #555;
+        text-shadow: 0 1px 1px #000;
+        margin:8px;
+        padding: 5px 8px;
+    }
+
+    ul li {
+        color: #fff;
+        margin: 5px 8px;
+    }
+</style>
+</head>
+
+<body ng-app="app" ng-controller="appCtrl">
+    <h1>Mock.js demo</h1>
+    <hr/>
+
+    <p><button ng-click="get()">伪装发送http请求</button></p>
+    
+    <ul ng-repeat="item in box" style="background: {{item.color}}">
+        <li>{{item.name}}</li>
+        <li>{{item.age}}</li>
+    </ul>
+
+    <script src="./mock-min.js"></script>
+    <script src="./angular.min.js"></script>
+    
+    <!-- 兼容angular -->
+    <script src="./mock.angular.js"></script>
+    <!-- 我把模拟数据都写在这个文件夹里了 -->
+    <script src="./mockData.js"></script>
+
+    <script src="./index.js"></script>
+</body>
+</html>
